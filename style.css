@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Muli', sans-serif;
+  background-color: #493240;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   display: flex;
   align-items: center;
@@ -13,4 +14,40 @@ body {
   justify-content: center;
   overflow: hidden;
   height: 100vh;
+}
+
+button {
+  background-color: #FF0099;
+  color: #fff;
+  border: 1px #FF0099 solid;
+  border-radius: 2px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 10px 0;
+  padding: 20px 30px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+button:focus {
+  outline: none;
+}
+
+button .circle {
+  background-color: #fff;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
 }
